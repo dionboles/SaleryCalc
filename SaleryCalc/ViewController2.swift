@@ -20,9 +20,24 @@ class ViewController2: UIViewController {
     
 
     @IBAction func AnnualBtn(_ sender: UIButton) {
-        let hourPay = Double(txtPay.text!)
-        annualLable.text = String(AnnualBackToHour(yearPay: hourPay!))
-    }
+		let hourPay = Double(txtPay.text!)
+		let numberFormatter = NumberFormatter()
+		
+		numberFormatter.numberStyle = NumberFormatter.Style.decimal
+		numberFormatter.maximumFractionDigits = 2
+		
+		
+		
+		if (hourPay != nil){
+			
+			annualLable.text = "$" +  String(describing: numberFormatter.string(from: NSNumber(value:AnnualBackToHour(yearPay:ceil(hourPay!))))!)
+		}else{
+			let alert = UIAlertController(title: "Please Enter a Number", message: "", preferredStyle: .alert)
+			alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+			self.present(alert, animated: true, completion: nil)
+			annualLable.text = "Enter Your Salary Pay Below"
+		}
+	}
     /*
     // MARK: - Navigation
 

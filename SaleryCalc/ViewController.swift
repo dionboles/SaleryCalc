@@ -28,11 +28,12 @@ class ViewController: UIViewController {
         numberFormatter.numberStyle = NumberFormatter.Style.decimal
 		
 		if (hourPay != nil){
-        salaryLabel.text = numberFormatter.string(from: NSNumber(value:GrossAnnual(hrPay:hourPay!)))
+			salaryLabel.text = "$" + String(describing: numberFormatter.string(from: NSNumber(value:GrossAnnual(hrPay:hourPay!)))!)
 		}else{
 			let alert = UIAlertController(title: "Please Enter a Number", message: "", preferredStyle: .alert)
 			alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
 			self.present(alert, animated: true, completion: nil)
+			salaryLabel.text = "Enter Your Hourly Pay Below"
 		}
     }
     
