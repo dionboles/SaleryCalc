@@ -11,8 +11,12 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var PayText: UITextField!
     
-    @IBOutlet weak var salaryLabel: UILabel!
+	@IBOutlet var hourBtn: UIButton!
+	@IBOutlet weak var salaryLabel: UILabel!
     override func viewDidLoad() {
+		hourBtn.layer.cornerRadius = 5
+		hourBtn.layer.borderWidth = 1
+		hourBtn.layer.borderColor = nil
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -22,7 +26,14 @@ class ViewController: UIViewController {
         let hourPay = Double(PayText.text!)
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = NumberFormatter.Style.decimal
+		
+		if (hourPay != nil){
         salaryLabel.text = numberFormatter.string(from: NSNumber(value:GrossAnnual(hrPay:hourPay!)))
+		}else{
+			let alert = UIAlertController(title: "Please Enter a Number", message: "", preferredStyle: .alert)
+			alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+			self.present(alert, animated: true, completion: nil)
+		}
     }
     
     func GrossAnnual( hrPay:Double) -> Double{

@@ -1,77 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2kC-lD-WuJ">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2kC-lD-WuJ">
+    <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Calculte -->
+        <!--Calculate Salary By Hour-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SaleryCalc" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XTc-Hn-n8p">
-                                <rect key="frame" x="45" y="119" width="288" height="30"/>
+                                <rect key="frame" x="43" y="152" width="288" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1T2-gO-XOl">
-                                <rect key="frame" x="164" y="189" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Enter Your Hourly Pay Below" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1jJ-Uh-n2l">
+                                <rect key="frame" x="54" y="84" width="266" height="31"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1T2-gO-XOl">
+                                <rect key="frame" x="107" y="246" width="160" height="40"/>
+                                <color key="backgroundColor" red="0.35874357820000002" green="0.70084601639999999" blue="0.72675770520000005" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="y5Q-Po-Uz2"/>
+                                </constraints>
+                                <state key="normal" title="Calculate">
+                                    <color key="titleColor" red="0.99632558360000001" green="1" blue="0.96025245020000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="GrossAnnual:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KJB-Qd-dQ6"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1jJ-Uh-n2l">
-                                <rect key="frame" x="166" y="81" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="1jJ-Uh-n2l" firstAttribute="centerX" secondItem="1T2-gO-XOl" secondAttribute="centerX" id="3vR-O6-qkN"/>
-                            <constraint firstItem="1jJ-Uh-n2l" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KTb-bv-itO"/>
-                            <constraint firstItem="XTc-Hn-n8p" firstAttribute="top" secondItem="1jJ-Uh-n2l" secondAttribute="bottom" constant="17" id="QnJ-Au-NI0"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XTc-Hn-n8p" secondAttribute="trailing" constant="42" id="Rbu-2F-Eba"/>
-                            <constraint firstItem="XTc-Hn-n8p" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="V7N-d5-aCw"/>
-                            <constraint firstItem="1T2-gO-XOl" firstAttribute="top" secondItem="XTc-Hn-n8p" secondAttribute="bottom" constant="40" id="jCw-kK-gSV"/>
-                            <constraint firstItem="1jJ-Uh-n2l" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="17" id="tJL-9u-kpS"/>
-                            <constraint firstItem="1T2-gO-XOl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="164" id="tlD-rw-Ty7"/>
-                            <constraint firstItem="1jJ-Uh-n2l" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="166" id="xhB-0K-whe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1T2-gO-XOl" secondAttribute="bottom" constant="527" id="1Mw-T0-ayl"/>
+                            <constraint firstItem="XTc-Hn-n8p" firstAttribute="top" secondItem="1jJ-Uh-n2l" secondAttribute="bottom" constant="37" id="6dQ-8J-KXR"/>
+                            <constraint firstItem="XTc-Hn-n8p" firstAttribute="centerX" secondItem="1jJ-Uh-n2l" secondAttribute="centerX" id="78I-lh-rVY"/>
+                            <constraint firstItem="1T2-gO-XOl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="107" id="AmC-qc-fW8"/>
+                            <constraint firstItem="XTc-Hn-n8p" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="43" id="Qm3-D1-v3U"/>
+                            <constraint firstItem="1T2-gO-XOl" firstAttribute="top" secondItem="XTc-Hn-n8p" secondAttribute="bottom" constant="64" id="rEs-na-4Oe"/>
+                            <constraint firstItem="1T2-gO-XOl" firstAttribute="centerX" secondItem="1jJ-Uh-n2l" secondAttribute="centerX" id="sYJ-zY-hOX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1T2-gO-XOl" secondAttribute="trailing" constant="147" id="tcN-vN-ohi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Calculte " largeTitleDisplayMode="always" id="bzE-Gw-bSA"/>
+                    <navigationItem key="navigationItem" title="Calculate Salary By Hour" largeTitleDisplayMode="always" id="bzE-Gw-bSA"/>
                     <connections>
                         <outlet property="PayText" destination="XTc-Hn-n8p" id="7NQ-CH-u6s"/>
+                        <outlet property="hourBtn" destination="1T2-gO-XOl" id="vYq-yW-g3a"/>
                         <outlet property="salaryLabel" destination="1jJ-Uh-n2l" id="8K5-a8-hzq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2220" y="605"/>
+            <point key="canvasLocation" x="2220" y="604.94752623688157"/>
         </scene>
         <!--View Controller2-->
         <scene sceneID="2gf-cM-Lma">
             <objects>
                 <viewController id="4UG-cT-9y6" customClass="ViewController2" customModule="SaleryCalc" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aKe-rH-bvJ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dtk-oP-5Kq">
-                                <rect key="frame" x="28" y="87" width="312" height="62"/>
+                                <rect key="frame" x="28" y="111" width="351" height="62"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="62" id="HEM-kr-2gT"/>
                                 </constraints>
@@ -80,13 +86,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FUB-z9-fXM">
-                                <rect key="frame" x="28" y="167" width="312" height="30"/>
+                                <rect key="frame" x="28" y="191" width="351" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IxU-Kz-8Si">
-                                <rect key="frame" x="159" y="303" width="46" height="30"/>
+                                <rect key="frame" x="159" y="498" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="AnnualBtn:" destination="4UG-cT-9y6" eventType="touchUpInside" id="Gq3-sN-gMR"/>
@@ -116,14 +122,14 @@
             </objects>
             <point key="canvasLocation" x="2372" y="-553.67316341829087"/>
         </scene>
-        <!--Item-->
+        <!--By Hour -->
         <scene sceneID="rD1-uq-iJv">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FSE-Pp-gP9" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="gAk-uh-H8u"/>
+                    <tabBarItem key="tabBarItem" title="By Hour " id="gAk-uh-H8u"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EtB-hA-eX4">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -141,6 +147,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="2kC-lD-WuJ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="o5z-f5-7dN">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -160,7 +167,7 @@
                     <tabBarItem key="tabBarItem" title="Item" id="ZBn-OC-ASi"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="04c-n1-Pux">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
