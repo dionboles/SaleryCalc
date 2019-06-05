@@ -18,6 +18,9 @@ class ViewController: UIViewController {
 		hourBtn.layer.borderWidth = 1
 		hourBtn.layer.borderColor = nil
         super.viewDidLoad()
+		let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
+		tap.cancelsTouchesInView = false
+		self.view.addGestureRecognizer(tap)
         // Do any additional setup after loading the view, typically from a nib.
     }
 //    31200 / 52 /5 /8
@@ -25,10 +28,15 @@ class ViewController: UIViewController {
     @IBAction func GrossAnnual(_ sender: UIButton) {
         let hourPay = Double(PayText.text!)
         let numberFormatter = NumberFormatter()
-        numberFormatter.numberStyle = NumberFormatter.Style.decimal
+        numberFormatter.numberStyle = NumberFormatter.Style.currency
+		var answer : String
+		answer = String(hourPay!)
+		answer = answer.replacingOccurrences(of: ",", with: "")
+		print(answer)
+
 		
 		if (hourPay != nil){
-			salaryLabel.text = "$" + String(describing: numberFormatter.string(from: NSNumber(value:GrossAnnual(hrPay:hourPay!)))!)
+			salaryLabel.text = String(describing: numberFormatter.string(from: NSNumber(value:GrossAnnual(hrPay:hourPay!)))!)
 		}else{
 			let alert = UIAlertController(title: "Please Enter a Number", message: "", preferredStyle: .alert)
 			alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))

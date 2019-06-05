@@ -14,7 +14,9 @@ class ViewController2: UIViewController {
     @IBOutlet weak var txtPay: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+		let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
+		tap.cancelsTouchesInView = false
+		self.view.addGestureRecognizer(tap)
         // Do any additional setup after loading the view.
     }
     
@@ -23,7 +25,7 @@ class ViewController2: UIViewController {
 		let hourPay = Double(txtPay.text!)
 		let numberFormatter = NumberFormatter()
 		
-		numberFormatter.numberStyle = NumberFormatter.Style.decimal
+		numberFormatter.numberStyle = NumberFormatter.Style.currency
 		numberFormatter.maximumFractionDigits = 2
 		
 		
@@ -38,16 +40,6 @@ class ViewController2: UIViewController {
 			annualLable.text = "Enter Your Salary Pay Below"
 		}
 	}
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
     
     func AnnualBackToHour( yearPay:Double) -> Double{
         let hoursWorked:Double = 8.00
